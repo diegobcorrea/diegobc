@@ -1,3 +1,5 @@
+var parentHeight = jQuery(window).height();
+var childHeight = jQuery('.main').height();
 
 jQuery(document).ready(function() {
 
@@ -20,9 +22,9 @@ jQuery(document).ready(function() {
 				jQuery(this).html(word);
 
 				if(widthOf){
-					jQuery(this).css({'width':wordWidth+'px'});
+					jQuery(this).animate({'width':wordWidth+'px'}, 200);
 				}else{					
-					jQuery(this).animate({'width':letterWidth+'px'});
+					jQuery(this).animate({'width':letterWidth+'px'}, 200);
 				}
 				
 			});
@@ -46,4 +48,17 @@ jQuery(document).ready(function() {
 			textAnimation.init();
 		});
 	});
+
+	jQuery(window).resize(function(){
+		var parentHeight = jQuery(window).height();
+		var childHeight = jQuery('.main').height();
+
+		jQuery('.main').animate({'margin-top': (parentHeight - childHeight) / 2});
+	});
 });
+
+jQuery(window).load(function(){
+	jQuery('.main').animate({'margin-top': (parentHeight - childHeight) / 2});
+});
+
+

@@ -1,5 +1,4 @@
 @import "nib"
-@import "normalize.styl"
 
 .main
 	height 100%
@@ -7,21 +6,35 @@
 	width 100%
 
 header.title
-	padding 15em 0 1em
+	color #fff
+	margin 0 auto 2em
+	padding-bottom 1.5em
+	text-align center
+	width 70%
 	h1
-		color #fff
 		cursor default
 		font-size 6em
-		margin 0
-		text-align center
+		margin 0 0 .2em
 		div
 			display inline-block
 			overflow hidden
 			vertical-align bottom
-			transition: width 1s ease-in-out;
 		div::first-letter
 			color #0A7DFF
+	h2
+		font-size 2em
+		font-style italic
+		margin 0
 
+p
+	color white
+	font-size 1.4em
+	margin 0 auto 1em
+	text-align center
+	width 60%
+
+a, a:hover, a:visited
+	color #0A7DFF
 
 .background
 	background-image url('../images/bg-temp.jpg')
@@ -34,7 +47,7 @@ header.title
 	z-index -1
 	&:after
 		content ''
-		background-color rgba(0,0,0,.3)
+		background-color rgba(0,0,0,.65)
 		height 100%
 		left 0
 		position absolute
