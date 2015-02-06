@@ -1,9 +1,6 @@
 @import "nib"
 @import "normalize.styl"
 
-body
-	background-image url('../images/bg-temp.jpg')
-	background-size cover
 .main
 	height 100%
 	position relative
@@ -27,13 +24,22 @@ header.title
 
 
 .background
-	background-color rgba(0,0,0,.3)
+	background-image url('../images/bg-temp.jpg')
+	background-size cover
 	height 100%
 	left 0
 	position absolute
 	top 0
 	width 100%
 	z-index -1
+	&:after
+		content ''
+		background-color rgba(0,0,0,.3)
+		height 100%
+		left 0
+		position absolute
+		top 0
+		width 100%
 
 .sociales
 	background-color rgba(255,255,255,.8)
@@ -46,3 +52,8 @@ header.title
 		display inline-block
 		font-size 0
 		margin 0 5px
+
+@media screen and (max-width 640px)
+	.background
+		background-image url('../images/bg-temp.jpg')
+		background-repeat no-repeat
