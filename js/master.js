@@ -5,6 +5,13 @@ jQuery(document).ready(function() {
 
 	var textAnimation = {
 		separate:function(widthOf){
+			if(jQuery(window).width() >= 641 ){
+				console.log("hola");
+
+				jQuery(".js-ln:first-child").text('becerra');
+				jQuery(".js-ln:last-child").text('Correa');
+			}
+
 			jQuery(".js-ln").each(function() {
 				var word = jQuery(this).text();
 				var letterW = word.charAt(0);
@@ -54,6 +61,7 @@ jQuery(document).ready(function() {
 		var childHeight = jQuery('.main').height();
 
 		jQuery('.main').animate({'margin-top': (parentHeight - childHeight) / 2});
+		textAnimation.init();
 	});
 });
 
