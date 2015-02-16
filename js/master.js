@@ -6,8 +6,6 @@ jQuery(document).ready(function() {
 	var textAnimation = {
 		separate:function(widthOf){
 			if(jQuery(window).width() >= 641 ){
-				console.log("hola");
-
 				jQuery(".js-ln:first-child").text('becerra');
 				jQuery(".js-ln:last-child").text('Correa');
 			}
